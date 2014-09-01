@@ -14,7 +14,7 @@
     background-size:contain;
     background-repeat: no-repeat;
     background-position:center;
- 	height:5.2em;
+ 	height:8.5em;
 		}
 		
 .punchHeader span {
@@ -31,11 +31,11 @@
 		}
 		
 .punchElem {
- 	height:7.2em;
+ 	height:12em;
 		}
 
 .punchSet {
- 	height:4.7em;
+ 	height:5.5em;
 		}
 
 @media (max-width: 768px){                                    /* Smarphone  landscape*/
@@ -99,7 +99,7 @@
   }
   
   .punchH {
- 	height:20%;
+ 	height:23%;
 		}		
 
   .punchHeader {
@@ -108,16 +108,21 @@
 		
 		
 .punchBody {
- 	height:66%;
+ 	height:52%;
 		}
+ 
+ .col-xs-5.punchElem {
+	height:40%;	
+ }
 
-.punchElem {
- 	height:33.333%;
-		}
-
+.col-xs-3.punchElem,.col-xs-4.punchElem {
+	height:60%;
+	width: 50%;	
+ } 
+  
 
 .punchBottom {
- 	height:14%;
+ 	height:25%;
 		}
 
 .punchSet {
@@ -129,13 +134,18 @@
 
 @media (min-width: 768px){
   .container{
-    max-width:40em;
+    max-width:45em;
   }  
 }
 
 @media (min-width: 992px){
   .container{
-    max-width:40em;
+    max-width:45em;
   }
 }
 
+@media (min-width: 1200px){
+  .container{
+    max-width:45em;
+  }
+}
