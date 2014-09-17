@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>End User Signup Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="dcterms.rightsHolder" content="Vince Gagliardi" />
+<meta name="dcterms.dateCopyrighted" content="2014" /> <meta name="Snappy Punch User Signup" content="A short description of the page" />
+<meta name="keywords" content="keywords describing this page, most search engines 
+ignore this now due to abuse"/>
+<!-- <link href="" type="text/css" rel="stylesheet" /> -->
+<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+		<h1>User Signup Page</h1>
+	
+<hr>
+<!--User Information Section-->	
+		
+		<h2> Customer Information</h2>
+		
+		
+<div>
+			<form ng-app="" ng-controller="validateCtrl" name="eu_signup" novalidate>
+		
+			<label for="firstname">
+			First Name:<input type="text" name="firstname" ng-model="user" required id="firstname" size="25" maxlength="25" />
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">First Name is Required.</span><br />
+			</label><br />
+
+			<label for="lastname">
+			Last Name:<input type="text" name="lastname" ng-model="user" id="lastname" size="25" maxlength="25" />
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">Last Name is Required.</span><br />
+			</label><br />
+			
+			<label for="address">
+			Address:<input type="text" name="address" id="address" size="40" maxlength="50" />
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">Address is Required.</span><br />
+			</label><br />
+			
+			<label for="city">
+			City:<input type="text" name="city" id="city" size="20" maxlength="30" /> 
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">City is Required.</span><br />
+			</label><br />
+			
+			
+			<label for="state">
+			State:<input type="text" name="state" id="state" size="2" maxlength="2" />			
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">State is Required.</span><br />
+			</label><br />
+			
+			
+			<label for="zip">
+			Zip:<input type="text" name="zip" id="zip" size="5" maxlength="5" />			
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid">
+			<span ng-show="eu_signup.user.$error.required">Zip is Required.</span><br />
+			</label><br />
+			
+			
+			<label for="mobilenumber">
+			Mobile Number:<input type="text" name="mobilenumber" id="mobilenumber" size="10" maxlength="10" /> 			
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid"></span>
+			<span ng-show="eu_signup.user.$error.required">Phone Number is Required.</span><br />
+			</label><br />
+			
+			
+			<label for="email">
+			Email Address:<input type="text" name="email" id="email" size="25" maxlength="25" /> 
+			<span style="color:red" ng-show="eu_signup.email.$dirty && myForm.email.$invalid">
+  			<span ng-show="myForm.email.$error.required">Email is Required.</span> 
+  			<span ng-show="myForm.email.$error.email">Invalid email address.</span><br />
+			</label><br />
+			
+			
+			<label for="username">
+			Username:<input type="text" name="username" id="username" size="15" maxlength="20" /> 
+			<span style="color:red" ng-show="eu_signup.user.$dirty && eu_signup.user.$invalid">
+  			<span ng-show="eu_signup.user.$error.required">Username is Required.</span> <br />
+			</label><br />
+			
+			
+			<label for="security">
+			Password:<input type="password" name="security" id="security" size="25" maxlength="25" /> <br />
+			</label><br />
+			
+		</form>
+</div>
+<!--  Buttons -->
+			<input type="reset" value="Reset Form" /><br/>
+			<input type="submit" value="Submit Registration" ng-disabled="eu_signup.user.$dirty && eu_signup.user.$invalid ||
+			eu_signup.email.$dirty && eu_signup.email.$invalid" /><br/>
+</body>
+</html>
