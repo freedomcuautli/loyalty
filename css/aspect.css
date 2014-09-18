@@ -1,3 +1,5 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 .punchgrids {
 	height:1.8em;
 	background-color: #AF8D71;

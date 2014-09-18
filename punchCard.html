@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="punchCard">
 	<head>
 		<meta charset="utf-8">
 
@@ -10,18 +10,26 @@
 		<meta name="description" content="">
 		<meta name="author" content="EAP">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+		<link href="css/patternLock.css?9"  rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="css/aspect.css" media="screen">
-		
-		
-
 	</head>
 
-	<body>
+	<body data-ng-controller="ModalDemoCtrl">
+		    <script type="text/ng-template" id="myModalContent.html">
+		        <div class="modal-header">
+		            <h3 class="modal-title">I'm a modal!</h3>
+		        </div>
+		        <div class="modal-body">
+		            <div id="createPattern" class="pattern-holder" data-ng-init="init()"></div>
+		            Selected: <b>{{ selected.item }}</b>
+		        </div>
+		        <div class="modal-footer">
+		            <button class="btn btn-primary" ng-click="ok()">OK</button>
+		            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+		        </div>
+		    </script>
+		    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
 		<div class="container">
 			<div class="row punchH">
 				<div class="col-xs-12 punchgrids punchHeader">
@@ -70,7 +78,7 @@
 					</span>
 					<span class="checkbox">
 					  <label>
-					    <input type="checkbox" value="">
+					    <input type="checkbox" value="" data-ng-click="open()">
 					  </label>
 					</span>
 					<span class="checkbox disabled">
@@ -96,5 +104,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script src="js/punchCard.js"></script>
+		<script src="js/patternLock.js"></script>
 	</body>
 </html>
