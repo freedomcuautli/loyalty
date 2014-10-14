@@ -6,7 +6,11 @@
 {
 
 
-var app = angular.module('formController, []);
+var app = angular.module('formValidation, []);
+app.controller('FormController', function(){
+	
+	
+});
 
-
+var eusername = 
 })();

@@ -8,9 +8,7 @@
 <meta name="keywords" content="keywords describing this page, most search engines 
 ignore this now due to abuse"/>
 <!-- <link href="" type="text/css" rel="stylesheet" /> -->
-<script src="js/angular.min.js"></script>
-<script src="js/angular.formController.js"></script>
-<script src="js/angular.input_verify.js"></script>
+
 
 </head>
 <body>
@@ -24,7 +22,7 @@ ignore this now due to abuse"/>
 		
 	
 <div>
-			<form ng-app="" ng-controller="validateCtrl" name="eu_signup" novalidate>
+			<form ng-app="form" ng-controller="validateCtrl" name="eu_signup" novalidate>
 		
 			<p>Username:<br>
   			<input type="text" name="username" ng-model="user" required>
@@ -179,5 +177,9 @@ ignore this now due to abuse"/>
 			eu_signup.email.$dirty && eu_signup.email.$invalid" /><br/>
 			</br/>   -->
 			
+<script src="js/angular.min.js"></script>
+<script src="js/angular.formController.js"></script>
+
+
 </body>
 </html>
