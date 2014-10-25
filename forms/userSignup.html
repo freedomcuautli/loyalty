@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="userSignup">
+<html ng-app="checkForm">
 <head>
 <title>Customer Signup Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +26,7 @@ ignore this now due to abuse"/>
 	
 	
 		Username:<br>
-  			<input type="text" ng-model="user.name" name="uName" required><br />
+  			<input type="text" ng-model="user.name" name="uName" required>{{uName}}<br />
   		
   			
   			<div style="color:red" ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid">Invalid:
@@ -35,7 +35,7 @@ ignore this now due to abuse"/>
   		</div>    
   			
 		Email:<br>
-			<input type="email" ng-model="user.email" name="uEmail" required><br />
+			<input type="email" ng-model="user.email" name="uEmail" required>{{uEmail}}<br />
   		
 			
 			<div ng-show="userSignup.uEmail.$dirty && userSignup.uEmail.$invalid">Invalid:
@@ -44,7 +44,7 @@ ignore this now due to abuse"/>
   				<span ng-show="userSignup.uEmail.$error.email">Invalid email address.</span>
 			</div>
 			
-<div ng-controller="ExampleController">
+<!-- <div ng-controller="ExampleController">
   <form name="form" class="css-form" novalidate>
     Name:
       <input type="text" ng-model="user.name" name="uName" required /><br />
@@ -63,7 +63,7 @@ ignore this now due to abuse"/>
               required /><br />
     <div ng-show="!user.agree || !user.agreeSign">Please agree and sign.</div>
 
-</div>
+</div> -->
 			
 <!-- Actions -->
 
@@ -76,7 +76,7 @@ ignore this now due to abuse"/>
   		<pre>master = {{master | json}}</pre>
   	
 </div>
-<script src="js/angular.min.js"></script>
+<script src="angular.js"></script>
 <script src="formVerification.js"></script>
 </body>
 </html>

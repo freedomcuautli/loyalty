@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-ng-app="checkForm">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+
+		<title>User Signup</title>
+		
+		<link rel="stylesheet" href="formCSS.css">
+	</head>
+
+	<body data-ng-controller="FormController">
+		
+		
+		
+		<form name="userSignup" class="css-form" novalidate>
+	
+	
+		Username:<br>
+  			<input type="text" ng-model="user.name" name="uName" required>{{uName}}<br />
+  			<span ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid"></span>
+  			<span ng-show="userSignup.uName.$error.required">Username is Required.</span>
+  			
+  			   
+  			
+		Email:<br>
+			<input type="email" ng-model="user.email" name="uEmail" required>{{uEmail}}<br />
+  		
+			<div ng-show="userSignup.uEmail.$dirty && userSignup.uEmail.$invalid">Invalid:
+  			<span ng-show="userSignup.uEmail.$dirty && userSignup.uEmail.$invalid">
+  			<span ng-show="userSignup.uEmail.$error.required"> An email is required.</span>
+  			<span ng-show="userSignup.uEmail.$error.email">Invalid email address.</span>
+			</div>
+			
+  			<button ng-click="reset()" ng-disabled="isUnchanged(user)" >RESET</button>
+    		<button ng-click="update(user)" ng-disabled="form.$invalid || isUnchanged(user)">SAVE</button>
+		
+	</form>
+	
+		<pre>form = {{user | json}}</pre>
+  		<pre>master = {{master | json}}</pre>
+  	 
+		
+		<script src="angular.js"></script>
+		<script src="formVerification.js"></script>
+		
+	</body>
+</html>
