@@ -24,8 +24,25 @@ ignore this now due to abuse"/>
 	
 	<form name="userSignup" class="css-form" novalidate>
 	
-	
 		Username:<br>
+  			<input type="text" ng-model="user.name" name="uName" required>{{uName}}<br />
+  		
+  			
+  			<div style="color:red" ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid">Invalid:
+  				<span ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid"></span>
+  				<span ng-show="userSignup.uName.$error.required">Username is Required.</span>
+  		</div>    
+  			
+  			Username:<br>
+  			<input type="text" ng-model="user.name" name="frName" required>{{frName}}<br />
+  		
+  			
+  			<div style="color:red" ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid">Invalid:
+  				<span ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid"></span>
+  				<span ng-show="userSignup.uName.$error.required">Username is Required.</span>
+  		</div>    
+  			
+  			Username:<br>
   			<input type="text" ng-model="user.name" name="uName" required>{{uName}}<br />
   		
   			
@@ -44,26 +61,7 @@ ignore this now due to abuse"/>
   				<span ng-show="userSignup.uEmail.$error.email">Invalid email address.</span>
 			</div>
 			
-<!-- <div ng-controller="ExampleController">
-  <form name="form" class="css-form" novalidate>
-    Name:
-      <input type="text" ng-model="user.name" name="uName" required /><br />
-    E-mail:
-      <input type="email" ng-model="user.email" name="uEmail" required/><br />
-    <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
-      <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
-      <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
-    </div>
-
-    Gender: <input type="radio" ng-model="user.gender" value="male" />male
-    <input type="radio" ng-model="user.gender" value="female" />female<br />
-
-    <input type="checkbox" ng-model="user.agree" name="userAgree" required />
-    I agree: <input ng-show="user.agree" type="text" ng-model="user.agreeSign"
-              required /><br />
-    <div ng-show="!user.agree || !user.agreeSign">Please agree and sign.</div>
-
-</div> -->
+		
 			
 <!-- Actions -->
 
