@@ -23,115 +23,117 @@ ignore this now due to abuse"/>
 <div ng-controller="FormController">
 	
 	<form name="userSignup" class="css-form" novalidate>
+
+<!--username field-->	
 	
 		Username:<br>
   			<input type="text" ng-model="user.name" name="uName" required>{{uName}}<br />
-  		
-  			
   			<div style="color:red" ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid">Invalid:
   				<span ng-show="userSignup.uName.$dirty && userSignup.uName.$invalid"></span>
   				<span ng-show="userSignup.uName.$error.required">Username is Required.</span>
-  		</div>   
+  			</div>   
+
+<!--first name field-->
   		
   		First Name:<br>
   			<input type="text" ng-model="user.fName" name="fName" required>{{fName}}<br />
-  		
-  			
   			<div style="color:red" ng-show="userSignup.fName.$dirty && userSignup.fName.$invalid">Invalid:
   				<span ng-show="userSignup.fName.$dirty && userSignup.fName.$invalid"></span>
   				<span ng-show="userSignup.fName.$error.required">First Name is Required.</span>
-  		</div>  
+  			</div>  
   			
-  		Last Name:<br>
-  			<input type="text" ng-model="user.lName" name="lName" required>{lName}}<br />
+<!--lastname field-->
   		
-  			
-  			<div style="color:red" ng-show="userSignup.lName.$dirty && userSignup.lName.$invalid">Invalid:
+  		Last Name:<br>
+  			<input type="text" ng-model="user.lName" name="lName" required>{{lName}}<br />
+			<div style="color:red" ng-show="userSignup.lName.$dirty && userSignup.lName.$invalid">Invalid:
   				<span ng-show="userSignup.lname.$dirty && userSignup.lname.$invalid"></span>
-  				<span ng-show="userSignup.lname.$error.required">First Name is Required.</span>
-  		</div>  
+  				<span ng-show="userSignup.lname.$error.required">Last Name is Required.</span>
+  			</div>  
+ 
+ <!--email field-->
   		
 		Email:<br>
 			<input type="email" ng-model="user.email" name="uEmail" required>{{uEmail}}<br />
   		
-			
 			<div ng-show="userSignup.uEmail.$dirty && userSignup.uEmail.$invalid">Invalid:
   				<span ng-show="userSignup.uEmail.$dirty && userSignup.uEmail.$invalid">
-  				<span ng-show="userSignup.uEmail.$error.required"> An email is required.</span>
+  				<span ng-show="userSignup.uEmail.$error.required"> An email is required.</span>    <!-- Check status of field dirty and @ sign -->
   				<span ng-show="userSignup.uEmail.$error.email">Invalid email address.</span>
 			</div>
 			
+	
+<!--address fields-->
+			
 		Address:<br>
   			<input type="text" ng-model="user.address1" name="address1" required>{{address1}}<br />
-  		
-  			
-  			<div style="color:red" ng-show="userSignup.address1.$dirty && userSignup.address1.$invalid">Invalid:
+			<div style="color:red" ng-show="userSignup.address1.$dirty && userSignup.address1.$invalid">Invalid:
   				<span ng-show="userSignup.address1.$dirty && userSignup.address1.$invalid"></span>
   				<span ng-show="userSignup.address1.$error.required">Address is Required.</span>
   			</div>
   		
-  		Address:<br>
-  			<input type="text" ng-model="user.address2" name="address2" required>{{address2}}<br />
+<!--  		Address:<br>
+  			<input type="text" ng-model="user.address2" name="address2" required>{{address2}}<br />   -->
   		
-  		City:
+ <!--city field-->
+  		
+  		City:<br>
   			<input type="text" ng-model="user.city" name="city" required>{{city}}<br />
-  			
-  			 <div style="color:red" ng-show="userSignup.city.$dirty && userSignup.city.$invalid">Invalid:
+			 <div style="color:red" ng-show="userSignup.city.$dirty && userSignup.city.$invalid">Invalid:
   				<span ng-show="userSignup.city.$dirty && userSignup.city.$invalid"></span>
   				<span ng-show="userSignup.city.$error.required">City is Required.</span>
   			</div>
-  			
-  		State:
+
+<!--state field-->
+ 			
+  		State:<br>
   			<input type="text" ng-model="user.state" name="state" required>{{state}}<br />
-  			
-  			 <div style="color:red" ng-show="userSignup.city.$dirty && userSignup.city.$invalid">Invalid:
-  				<span ng-show="userSignup.city.$dirty && userSignup.city.$invalid"></span>
-  				<span ng-show="userSignup.city.$error.required">City is Required.</span>
+				<span ng-show="userSignup.state.$dirty && userSignup.state.$invalid"></span>
+  				<span ng-show="userSignup.state.$error.required">State is Required.</span>
   			</div>
   			
-  			
-  			<select name="stateList" id="stateMenu">
+<!--drop down menu for state-->		
+  	<!--		<select name="stateList" id="stateMenu">
 			<option value="">State</option>
 
 			</select><br/>
 		
 			<div id = "teamselect"></div><br/>
-			<div id = "teamnametxt"></div><br/>
+			<div id = "teamnametxt"></div><br/> -->
   		
-  		Zip:
+<!--zipcode field-->
+  		
+  		Zip:<br>
   			<input type="text" ng-model="user.zip" name="zip" required>{{zip}}<br />
-  			
-  			 <div style="color:red" ng-show="userSignup.zip.$dirty && userSignup.zip.$invalid">Invalid:
+			<div style="color:red" ng-show="userSignup.zip.$dirty && userSignup.zip.$invalid">Invalid:
   				<span ng-show="userSignup.zip.$dirty && userSignup.zip.$invalid"></span>
   				<span ng-show="userSignup.zip.$error.required">Zip Code is Required.</span>
   			</div>
+  	
+ <!--mobile number field-->
   			
-  		Mobile Number:
-  			<input type="text" ng-model="user.mobileNumber" name="mNumber" required>{{mNum}}<br />
-  			
-  			 <div style="color:red" ng-show="userSignup.mobileNumber.$dirty && userSignup.mobileNumber.$invalid">Invalid:
-  				<span ng-show="userSignup.mobileNumber.$dirty && userSignup.mobileNumber.$invalid"></span>
-  				<span ng-show="userSignup.mobileNumber.$error.required">Mobile Number is Required.</span>
+  		Mobile Number:<br>
+  			<input type="text" ng-model="user.mobileNumber" name="mNumber" required>{{mNumber}}<br />
+			<div style="color:red" ng-show="userSignup.mNumber.$dirty && userSignup.mNumber.$invalid">Invalid:
+  				<span ng-show="userSignup.mNumber.$dirty && userSignup.mNumber.$invalid"></span>
+  				<span ng-show="userSignup.mNumber.$error.required">Mobile Number is Required.</span>
   			</div>
   			
+<!--password fields-->
   			
   		Password:<br>
   			<input type="security" ng-model="user.security" name="security" required>{{security}}<br />
-  		
-  			
-  			<div style="color:red" ng-show="userSignup.security.$dirty && userSignup.security.$invalid">Invalid:
+			<div style="color:red" ng-show="userSignup.security.$dirty && userSignup.security.$invalid">Invalid:
   				<span ng-show="userSignup.security.$dirty && userSignup.security.$invalid"></span>
   				<span ng-show="userSignup.security.$error.required">Password is Required.</span>
-  		</div>
+  			</div>
   		
   		Confirm Password:<br>
   			<input type="security" ng-model="user.security1" name="security1" required>{{security1}}<br />
-  		
-  			
-  			<div style="color:red" ng-show="userSignup.security1.$dirty && userSignup.security1.$invalid">Invalid:
+			<div style="color:red" ng-show="userSignup.security1.$dirty && userSignup.security1.$invalid">Invalid:
   				<span ng-show="userSignup.security1.$dirty && userSignup.security1.$invalid"></span>
   				<span ng-show="userSignup.security1.$error.required">Password is Required.</span>
-  		</div>
+  			</div>
   		
 			
 <!-- Actions -->
@@ -141,31 +143,10 @@ ignore this now due to abuse"/>
 		
 	</form>
 	
+		
 		<pre>form = {{user | json}}</pre>
   		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{fname | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		<pre>form = {{user | json}}</pre>
-  		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{user | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		<pre>form = {{user | json}}</pre>
-  		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{user | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		<pre>form = {{user | json}}</pre>
-  		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{user | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		<pre>form = {{user | json}}</pre>
-  		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{user | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		<pre>form = {{user | json}}</pre>
-  		<pre>master = {{master | json}}</pre>
-  			<pre>form = {{user | json}}</pre>
-  			<pre>master = {{master | json}}</pre>
-  		</div>
+  		
   		
 <script src="angular.js"></script>
 <script src="formVerification.js"></script>
