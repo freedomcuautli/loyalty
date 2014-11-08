@@ -19,6 +19,8 @@
  
      $scope.reset();
    }]);
+   			
+ var dropDownSelect = angular.module('dropDownMenu', []);
    
    
 
